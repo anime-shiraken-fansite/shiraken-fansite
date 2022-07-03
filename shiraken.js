@@ -31,7 +31,9 @@ $(function () {
         //スクロールによって変更を加えるcssは以下に記載
         //---
         // edit($("header"),"")
-        onVertical($("header ul"), "flex-col");
-        onHorizonal($("header ul"), "flex-rows");
+        onVertical($("header"), "absolute w-full");
+        onVertical($("header ul"), "h-screen flex-col");
+        onHorizonal($("header"), "fixed w-full");
+        onHorizonal($("header ul"), "w-full flex-rows");
     }
 });

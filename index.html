@@ -11,68 +11,105 @@
     <script src="./shiraken.js"></script>
 </head>
 
-<body>
-    <header class="fixed top-0 bg-orange-300">
+<body class="">
+    <header class="bg-orange-300">
         <!-- <img alt="しらけん！"> -->
-        <ul class="flex justify-between">
-            <li><a href="#about">このページについて</a></li>
-            <li><a href="#wip">工事中！<span>協力者募集中!!</span></a></li>
-            <li><a href="#story">ストーリー</a></li>
-            <li><a href="#music">ミュージック</a></li>
-            <li><a href="#gallery">ギャラリー</a></li>
-            <li><a href="#staff">スタッフ</a></li>
+        <ul class="flex flex-wrap justify-between px-8 text-xl">
+            <li class="p-2"><a href="#about">このページについて</a></li>
+            <li class="p-2"><a href="#wip">工事中<span class="bg-yellow-500 text-red-700">協力者募集中!!</span></a></li>
+            <li class="p-2"><a href="#story">ストーリー</a></li>
+            <li class="p-2"><a href="#music">ミュージック</a></li>
+            <li class="p-2"><a href="#gallery">ギャラリー</a></li>
+            <li class="p-2"><a href="#staff">スタッフ</a></li>
         </ul>
     </header>
     <!-- ヒーローイメージ -->
-    <div id="heroimage" class="w-screen h-screen bg-gray-500">test</div>
+    <div id="heroimage" class="w-full h-screen bg-gray-500"></div>
+
     <!-- このサイトについて -->
-    <div id="about">
-        <h2>このサイトについて</h2>
-        <p>
-            このサイト[
-            <!-- url -->]は、ホロライブプロダクションのタレントが参加するMinecraftサーバー上で発生したグループの一つである、<wbr><span>不知火建設のファンサイトです。</span>
-        </p>
+    <div class="">
+        <div id="about" class="max-w-7xl m-auto p-8 text-center">
+            <h2 class="text-4xl">このサイトについて</h2>
+            <p class="text-xl">
+                このサイトは、ホロライブプロダクションのタレントが参加するMinecraftサーバー上で生まれたグループの一つである、<br><span>不知火建設のファンサイトです。</span>
+            </p>
+        </div>
     </div>
     <!-- WIP -->
-    <div id="wip">
-        <p>このWebページ、</p>
-        <p>ガチ<span>で</span>工事中!</p>
-        <p>ファンアートの掲載許可や、デザインの提供、提案など。<wbr>素人でも、本職でも歓迎します。</p>
-        <!-- discordのサーバーリンクを掲載予定 -->
-        <a><img></a>
+    <div class="bg-danger_stripe">
+        <div id="wip" class="bg-white bg-opacity-60 max-w-7xl m-auto p-8 text-center">
+            <p>このWebページ、</p>
+            <p class="text-5xl">ガチ<span>で</span>工事中!</p>
+            <p>ファンアートの掲載許可や、デザインの提供、提案など。
+                <!-- <wbr>素人でも、本職でも。 -->
+            </p>
+            <!-- discordのサーバーリンクを掲載予定 -->
+            <a><img></a>
+        </div>
     </div>
     <!-- キャラクター -->
-    <div id="characters">
+    <div id="characters" class="">
         <!-- 社長と社員に置き換えてもいいかも -->
-        <h2>キャラクター</h2>
-        <div>
-            <!-- 名刺風に = コンポーネント化してもいいし、ここは画像でもいいかも。 -->
-            <div>
-                <img alt="不知火フレア">
-                <div>
-                    <h3>不知火フレア</h3>
+        <h2 class="text-center text-4xl">キャラクター</h2>
+        <!-- 不知火建設のロゴをバックにするといいかも。 -->
+        <div class=" bg-gray-500 max-w-7xl m-auto p-8 flex flex-wrap basis-96">
+
+            <div class="min-w-fit">
+                <!-- 名刺風に = コンポーネント化してもいいし、ここは画像でもいいかも。 -->
+                <!-- できれば紙のテクスチャ入れたい -->
+                <div class="bg-white w-96 h-56  rotate-2" data-modal-toggle="modal_flare">
+                    <img alt="不知火フレア">
+                    <div>
+                        <h3>不知火フレア</h3>
+                    </div>
+                </div>
+                <!-- クリック後の拡大表示 -->
+                <div id="modal_flare" class="hidden fixed w-full h-screen top-0 left-0 bg-gray-500 bg-opacity-50 z-10" aria-hidden="true">
+                    <div class=" bg-white min-w-96 h-auto mx-auto mt-8 p-8">
+                        <!-- 大きいイメージ -->
+                        <img class="w-1/3 object-contain bg-red-500">
+                        <div>
+                            <h3>不知火フレア</h3>
+                            <p>
+                                不知火建設社長/社員としての紹介をここに書く。
+                            </p>
+                            <h4>経歴</h4>
+                            <ul>
+                                <li>過去の行動について連ねる</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- クリック後の拡大表示 -->
-            <div>
-                <!-- 大きいイメージ -->
-                <img>
+            <div class="">
+                <!-- 名刺風に = コンポーネント化してもいいし、ここは画像でもいいかも。 -->
+                <div class="">
+                    <img alt="dummy">
+                    <div>
+                        <h3>不知火フレア</h3>
+                    </div>
+                </div>
+                <!-- クリック後の拡大表示 -->
                 <div>
-                    <h3>不知火フレア</h3>
-                    <p>
-                        不知火建設社長/社員としての紹介をここに書く。
-                    </p>
-                    <h4>経歴</h4>
-                    <ul>
-                        <li>過去の行動について連ねる</li>
-                    </ul>
+                    <!-- 大きいイメージ -->
+                    <img>
+                    <div class="opacity-0 ">
+                        <h3>dummy</h3>
+                        <p>
+                            不知火建設社員としての紹介をここに書く。
+                        </p>
+                        <h4>経歴dummy</h4>
+                        <ul>
+                            <li>過去の行動について連ねるdummy</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 同様のものをあと４人分! -->
     </div>
     <!-- ストーリー -->
-    <div id="story">
+    <div id="story" class="max-w-7xl m-auto p-8">
         <h2>ストーリー</h2>
         <!-- 時間とリンクするかは音楽投稿者と相談かも -->
         <div>
@@ -82,7 +119,7 @@
         </div>
     </div>
     <!-- ミュージック -->
-    <div id="music">
+    <div id="music" class="max-w-7xl m-auto p-8">
         <h2>ミュージック</h2>
         <p>
             <!-- <創作者名> --> オリジナルサウンドトラック
@@ -97,9 +134,9 @@
         </div>
     </div>
     <!-- ギャラリー -->
-    <div id="gallery"></div>
+    <div id="gallery" class="max-w-7xl m-auto p-8"></div>
     <!-- スタッフ -->
-    <div id="staff">
+    <div id="staff" class="max-w-7xl m-auto p-8">
         <!-- webページ開発者 -->
         <h2>スタッフ<span>webページ製作者とその協力者</span></h2>
         <h3>発案・コーディング</h3>
