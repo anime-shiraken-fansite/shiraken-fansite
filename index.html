@@ -12,7 +12,8 @@
 </head>
 
 <body class="">
-    <header class="bg-orange-300">
+    <!-- スマホサイズへの対応が必要… -->
+    <header class="bg-orange-300 z-10">
         <!-- <img alt="しらけん！"> -->
         <ul class="flex flex-wrap justify-between px-8 text-xl">
             <li class="p-2"><a href="#about">このページについて</a></li>
@@ -52,65 +53,69 @@
         <!-- 社長と社員に置き換えてもいいかも -->
         <h2 class="text-center text-4xl">キャラクター</h2>
         <!-- 不知火建設のロゴをバックにするといいかも。 -->
-        <div class=" bg-gray-500 max-w-7xl m-auto p-8 flex flex-wrap basis-96">
-
-            <div class="min-w-fit">
-                <!-- 名刺風に = コンポーネント化してもいいし、ここは画像でもいいかも。 -->
-                <!-- できれば紙のテクスチャ入れたい -->
-                <div class="bg-white w-96 h-56  rotate-2" data-modal-toggle="modal_flare">
-                    <img alt="不知火フレア">
-                    <div>
-                        <h3>不知火フレア</h3>
-                    </div>
-                </div>
-                <!-- クリック後の拡大表示 -->
-                <div id="modal_flare" class="hidden fixed w-full h-screen top-0 left-0 bg-gray-500 bg-opacity-50 z-10" aria-hidden="true">
-                    <div class=" bg-white min-w-96 h-auto mx-auto mt-8 p-8">
-                        <!-- 大きいイメージ -->
-                        <img class="w-1/3 object-contain bg-red-500">
-                        <div>
-                            <h3>不知火フレア</h3>
-                            <p>
-                                不知火建設社長/社員としての紹介をここに書く。
-                            </p>
-                            <h4>経歴</h4>
-                            <ul>
-                                <li>過去の行動について連ねる</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class=" bg-purple-100 max-w-7xl m-auto p-8 flex flex-wrap justify-around  gap-x-1 gap-y-8 basis-96">
+            <!-- 名刺風に = コンポーネント化してもいいし、ここは画像でもいいかも。 -->
+            <!-- できれば紙のテクスチャ入れたい -->
+            <div class="bg-white w-96 h-56 origin-bottom rotate-2 flex" data-modal-target="modal_flare">
+                <img alt="不知火フレア">
+                <div class="p-8">
+                    <p class="text-lg">不知火建設 社長</p>
+                    <h3 class="text-4xl mt-4">不知火 フレア</h3>
                 </div>
             </div>
-            <div class="">
-                <!-- 名刺風に = コンポーネント化してもいいし、ここは画像でもいいかも。 -->
-                <div class="">
-                    <img alt="dummy">
-                    <div>
-                        <h3>不知火フレア</h3>
-                    </div>
+            <div class="bg-white w-96 h-56 origin-bottom rotate-2 flex" data-modal-target="modal_polka">
+                <img alt="尾丸ポルカ">
+                <div class="p-8">
+                    <p class="text-lg">不知火建設</p>
+                    <h3 class="text-4xl mt-4">尾丸 ポルカ</h3>
                 </div>
-                <!-- クリック後の拡大表示 -->
-                <div>
-                    <!-- 大きいイメージ -->
-                    <img>
-                    <div class="opacity-0 ">
-                        <h3>dummy</h3>
-                        <p>
-                            不知火建設社員としての紹介をここに書く。
-                        </p>
-                        <h4>経歴dummy</h4>
-                        <ul>
-                            <li>過去の行動について連ねるdummy</li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="bg-white w-96 h-56 origin-bottom rotate-2 flex" data-modal-target="modal_miko">
+                <img alt="さくらみこ">
+                <div class="p-8">
+                    <p class="text-lg">不知火建設</p>
+                    <h3 class="text-4xl mt-4">さくら みこ</h3>
+                </div>
+            </div>
+            <div class="bg-white w-96 h-56 origin-bottom rotate-2 flex" data-modal-target="modal_suisei">
+                <img alt="星街すいせい">
+                <div class="p-8">
+                    <p class="text-lg">不知火建設</p>
+                    <h3 class="text-4xl mt-4">星街 すいせい</h3>
+                </div>
+            </div>
+            <div class="bg-white w-96 h-56 origin-bottom rotate-2 flex" data-modal-target="modal_noel">
+                <img alt="白銀ノエル">
+                <div class="p-8">
+                    <p class="text-lg">不知火建設</p>
+                    <h3 class="text-4xl mt-4">白銀 ノエル</h3>
                 </div>
             </div>
         </div>
-        <!-- 同様のものをあと４人分! -->
+        <!-- end of modals -->
+        <div id="modal_root" class="opacity-0 transition-opacity fixed w-full h-screen bg-gray-500 ">
+
+            <div id="modal_flare" class="bg-white min-w-96 h-auto mx-auto mt-8 p-8">
+                <!-- 大きいイメージ -->
+                <img class="w-1/3 object-contain bg-red-500">
+                <div>
+                    <h3>不知火フレア</h3>
+                    <p>
+                        不知火建設社長/社員としての紹介をここに書く。
+                    </p>
+                    <h4>経歴</h4>
+                    <ul>
+                        <li>過去の行動について連ねる</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 同様のものをあと４人分! -->
+
+        </div>
     </div>
     <!-- ストーリー -->
     <div id="story" class="max-w-7xl m-auto p-8">
-        <h2>ストーリー</h2>
+        <h2 class="text-center text-4xl">ストーリー</h2>
         <!-- 時間とリンクするかは音楽投稿者と相談かも -->
         <div>
             <h3>第１話<time></time></h3>
@@ -120,7 +125,12 @@
     </div>
     <!-- ミュージック -->
     <div id="music" class="max-w-7xl m-auto p-8">
-        <h2>ミュージック</h2>
+        <h2 class="text-center text-4xl">ミュージック</h2>
+        <iframe width="560" height="315" class="m-auto"
+            src="https://www.youtube.com/embed/videoseries?list=PLc7YOCFEU7lmOQc21kgYoxU4Z_FvNSdBp"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         <p>
             <!-- <創作者名> --> オリジナルサウンドトラック
         </p>
@@ -138,7 +148,7 @@
     <!-- スタッフ -->
     <div id="staff" class="max-w-7xl m-auto p-8">
         <!-- webページ開発者 -->
-        <h2>スタッフ<span>webページ製作者とその協力者</span></h2>
+        <h2 class="text-center text-4xl">スタッフ<span>webページ製作者とその協力者</span></h2>
         <h3>発案・コーディング</h3>
         <div>
             <img>
