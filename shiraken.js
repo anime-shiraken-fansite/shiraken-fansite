@@ -1,7 +1,21 @@
 $(function () {
-    $(window).on('scroll', function () {
-        function edit($target, classes) {
-            if (scroll > heroImageHeight * 0.7) {
+
+    $(window).on('scroll',scrollEvent );
+    scrollEvent();
+
+    function scrollEvent() {
+        function onHorizonal($target, classes) {
+            edit($target, classes, false);
+        }
+        function onVertical($target, classes) {
+            edit($target, classes, true);
+        }
+
+        function edit($target, classes, reverse) {
+            let isScrolled = scroll > heroImageHeight * 0.7;
+            if (reverse) { isScrolled = !isScrolled }
+
+            if (isScrolled) {
                 $target.addClass(classes);
             } else {
                 $target.removeClass(classes);
@@ -17,10 +31,7 @@ $(function () {
         //スクロールによって変更を加えるcssは以下に記載
         //---
         // edit($("header"),"")
-        edit($("header ul"), "flex");
-
-
-
-
-    });
+        onVertical($("header ul"), "flex-col");
+        onHorizonal($("header ul"), "flex-rows");
+    }
 });
