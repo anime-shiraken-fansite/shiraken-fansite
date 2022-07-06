@@ -31,15 +31,18 @@ $(function () {
         //---
         //スクロールによって変更を加えるcssは以下に記載
         //---
-        // edit($("header"),"")
-        onVertical($("header"), "absolute w-full");
-        onVertical($("header ul"), "h-screen flex-col");
-        onHorizonal($("header"), "fixed w-full");
-        onHorizonal($("header ul"), "w-full flex-rows");
+        // edit($("nav"),"")
+        onVertical($("nav"), "sm:absolute");
+        //onVertical($("nav ul"), "h-screen");
+        //スクロール後
+        onHorizonal($("nav"), "sm:fixed sm:w-full ");
+        onHorizonal($("nav ul"), "sm:w-full sm:h-auto sm:flex-row");
+        onHorizonal($("nav ul li"), "sm:w-fit");
     }
+    
     $("#navigation_button").on('click',toggleNavigationMenu);
     function toggleNavigationMenu()
     {
-        $("#navigation_list").toggleClass("h-0");
-    }
+        $("#navigation_wrap").toggleClass(" -translate-x-full");
+    } 
 });
