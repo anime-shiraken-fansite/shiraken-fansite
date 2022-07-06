@@ -19,6 +19,7 @@ $(function () {
                 $target.addClass(classes);
             } else {
                 $target.removeClass(classes);
+                
             }
         }
 
@@ -35,5 +36,10 @@ $(function () {
         onVertical($("header ul"), "h-screen flex-col");
         onHorizonal($("header"), "fixed w-full");
         onHorizonal($("header ul"), "w-full flex-rows");
+    }
+    $("#navigation_button").on('click',toggleNavigationMenu);
+    function toggleNavigationMenu()
+    {
+        $("#navigation_list").toggleClass("h-0");
     }
 });
